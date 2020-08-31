@@ -40,6 +40,7 @@
 - Textos
 - Cores
 - imagens
+- fonts
 
 # Entrega
 > No seu github, crie um repositório público com o teste e nos envie junto com a url do app funcionando(Ex.: Heroku).
