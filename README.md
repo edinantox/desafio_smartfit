@@ -43,7 +43,7 @@
 - fonts
 
 # Entrega
-> No seu github, crie um repositório público com o teste e nos envie junto com a url do app funcionando(Ex.: Heroku).
+> No seu github, crie um repositório público com o teste e nos envie (caso queira enviar a url do app funcionando no Heroku, vercel ou equivalente seria um plus)
 
 > Não faça Pull Request para esse repositório.
 
@@ -52,8 +52,12 @@
 - Lógica de programação
 - Qualidade de código
 - Qualidade de entrega (como se fosse para produção)
-- Teste unitário e e2e (teste apenas o que achar mais importante). Teste e2e é um plus.
 - Fidelidade ao layout proposto
 - Responsive design
 - cross browser and device (mobile, tablet e desktop)
-- App em produção (Ex.: Heroku)
+
+> Plus
+- Teste unitário e e2e (teste apenas o que achar mais importante).
+- Travis CI
+- App em produção (Ex.: Heroku, Vercel e etc...)
+- Rodando com Docker localmente
