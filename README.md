@@ -17,7 +17,7 @@
 > Caso não consiga concluir todas as funcionalidade, lembre-se que o mais importante é termos noção da qualidade do código e de suas habilidades para projeto de sistemas. Nesse caso, complemente sua solução com comentários e documentação sobre como terminaria o teste.
 
 ### Funcionalidades
-- Carrega unidades através da API `http://test-frontend-developer.s3.amazonaws.com/data/locations.json` com method `GET`
+- Carrega unidades através do arquivo json `https://test-frontend-developer.s3.amazonaws.com/data/locations.json` com method `GET`
 - Busca todas as unidades
 - Busca unidades com filtros
 - Mostra previsão de resultados encontrados
