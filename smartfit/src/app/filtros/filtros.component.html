@@ -1,0 +1,86 @@
+<div class="header"></div>
+<div class="container">
+    <div class="mensagem">
+        <h1 class="titulo"> REABERTURA <br>SMART FIT </h1>
+        <hr class="linha-titulo">
+        <br>
+        <p>
+            O horário de funcionamento das nossas unidades está seguindo os decretos de cada município. Por isso,
+            confira aqui se a sua unidade está aberta e as medidas de segurança que estamos seguindo.
+        </p>
+    </div>
+    <form class="form" [formGroup]="form">
+        <span><i class="icon-horario"></i> Horário</span>
+        <p class="quest">Qual período quer treinar?</p>
+        <hr />
+        <div class="linha-opcao">
+            <input type="radio" id="v1" value="manha" formControlName="opcao">
+            <label for="v1">Manhã</label> <span class="opcao">06:00 às 12:00</span>
+        </div>
+        <hr />
+        <div class="linha-opcao">
+            <input type="radio" id="v2" value="tarde" formControlName="opcao">
+            <label for="v2">Tarde</label> <span class="opcao">12:01 às 18:00</span>
+        </div>
+        <hr />
+        <div class="linha-opcao">
+            <input type="radio" id="v3" value="noite" formControlName="opcao">
+            <label for="v3">Noite</label> <span class="opcao">18:01 às 23:00</span>
+        </div>
+        <hr>
+        <br>
+        <div class="linha-res">
+            <input type="checkbox" id="fechadas" formControlName="fechadas">
+            <label for="fechadas">Exibir unidades fechadas</label>
+            <span>Resultados encontrados: <span class="qtd-resultado">{{qtdResultados}}</span></span>
+        </div>
+        <div class="botoes">
+            <button class="btn btn-yellow" (click)="filtrar()">Encontrar unidade</button>
+            <button class="btn" (click)="form.reset()">Limpar</button>
+        </div>
+    </form>
+
+    <div class="legend">
+        <div class="legend-block" *ngFor="let leg of legend">
+            <h4>{{leg.nome}}</h4>
+            <div class="legend-block-img">
+                <div *ngFor="let legImg of leg.img">
+                    <img src="../../assets/images/{{legImg.url}}">
+                    <span>{{legImg.desc}}</span>
+                </div>                
+            </div>
+        </div>
+
+    </div>
+
+    <ng-container *ngIf="show">
+        <div class="list" *ngIf="qtdResultados > 0 else nenhumRes">
+            <div class="card" *ngFor="let unidade of resultados">
+                <h4 [ngClass]="{'clr-green': unidade.opened, 'clr-red': !unidade.opened }">{{unidade.opened ? 'Aberta' : 'Fechada'}}</h4>
+                <h2>{{unidade.title}}</h2>
+                <span [innerHTML]="unidade.content"></span>
+                <ng-container *ngIf="unidade.opened">
+                    <hr />
+                    <br>
+                    <img src="../../assets/images/{{unidade.mask}}-mask.png">
+                    <img src="../../assets/images/{{unidade.towel}}-towel.png">
+                    <img src="../../assets/images/{{unidade.fountain}}-fountain.png">
+                    <img src="../../assets/images/{{unidade.locker_room}}-lockerroom.png">
+                    <br>
+                    
+                    <div class="horarios" *ngFor="let schedule of unidade.schedules">
+                        <h3>{{schedule.weekdays}}</h3>
+                        <span>{{schedule.hour}}</span>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+
+        <ng-template #nenhumRes>
+            Nenhuma unidade encontrada
+        </ng-template>
+    </ng-container>
+</div>
+<div class="footer">
+    <span>Todos os direitos reservados - 2020</span>
+</div>

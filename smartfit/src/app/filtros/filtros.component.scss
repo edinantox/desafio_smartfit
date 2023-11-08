@@ -1,0 +1,279 @@
+@import '../../variables.scss';
+
+.clr-green {
+    color: $green;
+}
+
+.clr-red {
+    color: $red;
+}
+
+.clr-yellow {
+    color: $yellow;
+}
+
+.clr-default {
+    color: $light-grey;
+}
+
+.container {
+    margin: 70px 10%;
+    min-height: 100vh;
+}
+
+.header {
+    height: 100px;
+    background-color: #000;
+    margin-bottom: 20px;
+}
+
+.legend {
+    width: 100%;
+    min-height: 200px;
+    background-color: #ededed;
+    margin: 40px 0px
+}
+
+.legend-block h4 {
+    font-family: "gotham-bold";
+}
+
+.legend-block {
+    height: 100%;
+    text-align: center;
+    display: inline-block;
+}
+
+.legend-block h4 {
+    display: block;
+}
+
+.legend-block-img {
+    display: flex;
+    flex-direction: row;
+}
+
+.legend-block-img div {
+    flex: 1;
+}
+
+.legend-block span {
+    font-family: "gotham-book";
+    display: block;
+}
+
+.legend-block img {
+    width: 50px;
+    height: 50px;
+}
+
+.mensagem {
+    color: $dark-grey
+}
+
+.linha-titulo {
+    width: 75px;
+    height: 7px;
+    display: block;
+    background-color: #000;
+    float: left;
+}
+
+.footer {
+    height: 200px;
+    background-color: #333;
+    color: white;
+}
+
+.footer span {
+    width: 100%;
+    display: inline-block;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.header,
+.footer,
+.legend {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.form {
+    position: relative;
+    padding: 20px;
+    border: 3px solid #ededed;
+    border-radius: 10px;
+    min-height: 100px;
+    color: $light-grey;
+}
+
+.titulo {
+    font-family: "gotham-bold";
+}
+
+.icon-horario {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    background-image: url(../../assets/images/icon-hour.png);
+    text-align: center;
+    vertical-align: middle;
+}
+
+.quest {
+    font-size: x-large;
+}
+
+.linha-opcao input,
+input[type=checkbox] {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+}
+
+.linha-opcao {
+    padding: 10px;
+}
+
+.linha-res {
+    color: #000;
+    font-family: "gotham-book";
+}
+
+.linha-opcao span.opcao,
+.linha-res span:not(.qtd-resultado) {
+    float: right;
+}
+
+.qtd-resultado {
+    color: #000;
+    font-size: 1.5em;
+    font-family: "gotham-bold";
+}
+
+.botoes {
+    margin: 20px 0px;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+
+.btn:hover {
+    background-color: #ccc;
+}
+
+.btn {
+    cursor: pointer;
+    border-radius: 3px;
+    padding: 15px 30px;
+    color: #000;
+    border: 2px solid #ccc;
+    margin: 5px;
+    min-width: 250px;
+    font-family: "gotham-bold";
+    text-transform: uppercase;
+    background-color: #fff;
+}
+
+.btn-yellow:hover {
+    border: 2px solid #a37407;
+    background-color: #a37407;
+}
+
+.btn-yellow {
+    border: 2px solid $yellow;
+    background-color: $yellow;
+}
+
+.list {    
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card hr{
+    background-color: $light-grey;
+}
+
+.card h2{
+    font-family: "gotham-bold";
+}
+.card h4{
+    margin: 0;
+}
+
+.card {
+    flex: 0 0 calc(30% - 10px);
+    min-height: 100px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 5px #ccc;
+    margin: 10px;
+    display: inline-block;
+    padding: 10px;
+    background-color: #ededed;
+}
+
+.horarios {
+    width: 50%;
+    display: inline-block;
+}
+
+.card img {
+    display: inline-block;
+    width: 25%;
+}
+@media (min-width: 768px) {
+    .header {
+        background-position: center;
+        background-size: 150px 70px;
+        background-image: url(../../assets/images/logo.svg);
+    }
+
+    .footer {
+        background-position: top 25px center;
+        background-size: 100px 70px;
+        background-image: url(../../assets/images/logo.svg);
+    }
+
+    .legend-block {
+        width: 25%
+    }
+}
+
+@media (max-width: 768px) {
+    
+    .container {
+        margin: 70px 5%;
+    
+    }
+
+    .header {
+        background-position: center;
+        background-size: 150px 70px;
+        background-image: url(../../assets/images/logo.svg);
+    }
+
+    .footer {
+        background-position: top 25px center;
+        background-size: 100px 70px;
+        background-image: url(../../assets/images/logo.svg);
+    }
+
+    .legend-block {
+        width: 100%
+    }
+
+    .legend {
+        padding-bottom: 30px;
+    }
+
+    .list {    
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-auto-rows: 1fr;
+    }
+
+    
+}
